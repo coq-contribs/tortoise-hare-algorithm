@@ -1,9 +1,20 @@
+(* author: Jean-Christophe Filliâtre *)
 
-(****************************************************************************)
-(*  Correctness proof of Floyd's cycle-finding algorithm, also known as     *)
-(*  the "tortoise and the hare"-algorithm.                                  *)
-(*  See http://en.wikipedia.org/wiki/Floyd's_cycle-finding_algorithm        *)
-(****************************************************************************)
+(**
+  Correctness proof of Floyd's cycle-finding algorithm, also known as     
+  the "tortoise and the hare"-algorithm
+  (see http://en.wikipedia.org/wiki/Floyd's_cycle-finding_algorithm)
+
+  If $f:A\rightarrow A$ is a function over a finite set $A$, 
+  then the iterations of $f$ from $x_0\in A$ will ultimately cycle. 
+  The following code finds out an integer $m$ such that 
+  $f^m(x_0)=f^{2m}(x_0)$ :
+<<
+let rec race m x y = if x = y then m else race (m+1) (f x) (f (f y))
+in race 1 (f x0) (f (f x0))
+>>
+  The difficulty is to prove $f$'s termination.
+*)
 
 Require Export Arith.
 Require Export Omega.
