@@ -6,8 +6,6 @@ Description:
   Correctness proof of Floyd's cycle-finding algorithm, also known as
   the "tortoise and the hare"-algorithm. 
   See http://en.wikipedia.org/wiki/Floyd's_cycle-finding_algorithm
-Keywords: program verification, cycle-finding, floyd
-
-
-
+Keywords: program verification, paths, cycle detection, 
+	  graphs, graph theory, finite sets, floyd
 Category: Computer Science/Decision Procedures and Certified Algorithms/Correctness proofs of algorithms
