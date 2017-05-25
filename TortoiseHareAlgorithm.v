@@ -1,4 +1,4 @@
-(* author: Jean-Christophe Filli‚tre *)
+(* author: Jean-Christophe Filli√¢tre *)
 
 (**
   Correctness proof of Floyd's cycle-finding algorithm, also known as     
