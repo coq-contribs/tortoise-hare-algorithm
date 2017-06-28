@@ -120,7 +120,7 @@ Proof.
   replace (2 * (S m) + (d0 - 1)) with (S (2 * m + d0)) by omega.
   auto.
   omega.
-Save.
+Qed.
 
 Definition R x y := lex (variant x) (variant y).
 Axiom R_wf : well_founded R.
